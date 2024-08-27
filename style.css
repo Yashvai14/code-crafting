@@ -264,3 +264,40 @@ video{
     width: 14%;
 }
 
+#page3{
+    height: 100vh;
+    width: 100%;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+}
+
+#page3 h4{
+    font-size: 30px;
+    width: 50%;
+    text-align: center;
+    line-height: 45px;
+    text-transform: uppercase;
+}
+
+#page3 p{
+    margin-top: 15px;
+}
+
+#page3 img{
+    position: absolute;
+    height: 50px;
+    width: 50px;
+}
+
+#page3 #colon1{
+    left: 20%;
+    top: 30%;
+}
+
+#page3 #colon2{
+    bottom: 30%;
+    right: 25%;
+}
