@@ -301,3 +301,103 @@ video{
     bottom: 30%;
     right: 25%;
 }
+
+#page4{
+    height: 150vh;
+    width: 100%;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#form{
+    position: relative;
+    max-width: 700px;
+    width: 100%;
+    background: linear-gradient(to left bottom, #119F3A, #ace022);;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(211, 206, 206, 0.45);
+    z-index: 10;
+}
+
+#form header{
+    font-size: 2rem;
+    color: #000;
+    text-align: center;
+}
+
+#form .form{
+    margin-top: 30px;
+
+}
+
+#input-box{
+    width: 100%;
+    margin-top: 20px;
+}
+
+#input-box label{
+    color: #333;
+    font-size: 20px;
+    margin-left: 22px;
+}
+
+#input-box input{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    outline: none;
+    font-size: 1rem;
+    margin-top: 8px;
+    color: #707070;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    padding: 0 15px;
+}
+
+#semester{
+    position: relative;
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    background-color: white;
+    border: none;
+    border-radius: 4px;
+    color: #000;
+    height: 50px;
+    width: 100%;
+    outline: none;
+    font-size: 1rem;
+    margin-top: 8px;
+    color: #707070;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    padding: 0 15px;
+    
+}
+
+option{
+    color: #000;
+}
+
+button{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    padding-top: 20px;
+    margin-top: 25px;
+}
+
+button:hover{
+    box-shadow: 0 0 20px #26e1e7;
+    background: linear-gradient(to right, #26e1e7, #1e3c72);
+}
