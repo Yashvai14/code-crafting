@@ -163,7 +163,7 @@ html, body{
 
 #nav ul li{
     display: inline;
-    margin-right: 30px;
+    margin-right: 25px;
     text-transform: uppercase;
     font-size: 18px;
     font-weight: 400;
@@ -172,6 +172,38 @@ html, body{
 a{
     text-decoration: none;
     
+}
+
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    justify-content: space-between;
+    z-index: 99;
+    margin-right: 15px;
+}
+
+.menu-icon span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.menu-icon.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-icon.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-icon.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
 }
 
 #logo{
@@ -187,6 +219,10 @@ video{
     object-fit: cover;
     position: fixed;
     z-index: -1;
+}
+
+#ssit{
+    margin-bottom: 45px;
 }
 
 #main{
@@ -206,13 +242,12 @@ video{
 }
 
 #page1 h1{
-    font-size: 70px;
-    margin-bottom: 20px;
+    font-size: 110px;
     position: relative;
 }
 
 #page1 h1::before{
-    content: "CODE CRAFTING CODING CLUB";
+    content: "CODE CRAFTING";
     position: absolute;
     color: black;
     top: -5px;
@@ -221,13 +256,31 @@ video{
     z-index: -1;
 }
 
-#page h2{
-    font-size: 60px;
-    margin-bottom: 20px;
+.sub{
+    font-size: 75px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    position: relative;
 }
 
-#page p{
+.sub::before{
+    content: "CODING CLUB";
+    position: absolute;
+    color: black;
+    top: -5px;
+    left: -5px;
+    -webkit-text-stroke: 2px #95c11e;
+    z-index: -1;
+}
+
+#page1 h2{
     font-size: 40px;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+}
+
+#sub2 {
+    font-size: 25px;
 }
 
 #page2{
@@ -253,14 +306,14 @@ video{
     display: inline-block;
     white-space: nowrap;
     animation-name: scroll;
-    animation-duration: 25s;
+    animation-duration: 11s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
 
 #scroller h4{
     display: inline-block;
-    font-size: 120px;
+    font-size: 110px;
     color: transparent;
     transition: linear 0.5s;
     -webkit-text-stroke: 2px #95c11e;
@@ -555,4 +608,106 @@ button:hover{
     margin-right: 15px;
     margin-top: 25px;
     font-weight: 600;
+}
+
+/* Media query for screen width 768px and below */
+@media (max-width: 768px) {
+    /* Adjust logo size */
+    #logo {
+        height: 150px;
+        width: 180px;
+        margin-top: 20px;
+    }
+
+    /* Navigation menu style */
+    #nav ul {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        height: 100vh;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        transition: 0.5s;
+        overflow-x: hidden;
+    }
+
+    /* Show menu when active */
+    #nav ul.active {
+        right: 0;
+    }
+
+    /* Adjust menu items */
+    #nav ul li {
+        display: block;
+        font-size: 22px;
+        margin: 15px 0;
+    }
+
+    #nav ul li a:hover{
+        color: #26e1e7;
+    }
+
+    /* Hide the menu icon */
+    .menu-icon {
+        display: flex;
+        margin-left: 220px;
+    }
+
+    /* Adjust card size */
+    .card {
+        width: 80%;
+        height: 60%;
+    }
+
+    #cards-container {
+        flex-direction: column;
+    }
+}
+
+/* Media query for screen width 600px and below */
+@media (max-width: 600px) {
+    /* Reduce the logo size further */
+    #logo {
+        height: 80px;
+        width: 130px;
+    }
+
+    /* Smaller font size for headers */
+    #page1 h1 {
+        font-size: 50px;
+    }
+
+    /* Navigation menu items size for small screens */
+    #nav ul li {
+        font-size: 18px;
+    }
+
+    /* Make form more compact */
+    #form {
+        padding: 15px;
+    }
+
+    #form header {
+        font-size: 1.5rem;
+    }
+
+    #input-box input {
+        font-size: 0.9rem;
+    }
+
+    /* Adjust the button size */
+    button {
+        font-size: 14px;
+        padding: 15px;
+    }
+
+    /* Adjust card height in the cards section */
+    .card {
+        height: 50%;
+    }
 }
