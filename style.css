@@ -264,7 +264,7 @@ video{
 }
 
 .sub::before{
-    content: "CODING CLUB";
+    content: "(CODING CLUB)";
     position: absolute;
     color: black;
     top: -5px;
@@ -343,7 +343,7 @@ video{
 }
 
 #about-us{
-    height: 40vh;
+    height: 60vh;
     width: 100%;
     text-align: center;
     display: flex;
@@ -487,9 +487,8 @@ video{
 }
 
 #page4{
-    height: 120vh;
+    height: 100vh;
     width: 100%;
-    background-color: #000;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -586,6 +585,101 @@ button:hover{
     background: linear-gradient(to right, #26e1e7, #1e3c72);
 }
 
+
+#events{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+    z-index: 10;
+}
+
+#events h1{
+    font-size: 55px;
+    font-weight: 800;
+    position: relative;
+    text-transform: uppercase;
+    text-align: center;
+
+}
+
+#events h1::before{
+    content: "upcoming tech events and hackathons register now";
+    position: absolute;
+    color: black;
+    top: -7px;
+    left: -7px;
+    -webkit-text-stroke: 3px #95c11e;
+    z-index: -1;
+}
+
+
+#upcoming{
+    margin-bottom: -220px;
+    margin-top: 90px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+
+}
+
+.time{
+    height: 110%;
+    width: 50%;
+    background: rgba(0, 0, 0, 0.55);
+    border-radius: 20px;
+    
+}
+
+.time-bg{
+    background: #056b6e;
+    height: 70px;
+    width: 30%;
+    font-size: 19px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.time-bg:hover{
+    background: #119F3A;
+}
+
+.time-bg h3{
+    padding: 8px;
+}
+
+.text6{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.text6 p{
+    width: 60%;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 500;
+}
+
+
+.regis h1::before{
+    content: "Hackathon and event REGISTRATION";
+    position: absolute;
+    color: black;
+    top: -5px;
+    left: -5px;
+    -webkit-text-stroke: 3px #95c11e;
+    z-index: -1;
+}
+
+
+
+
 #footer{
     height: 40vh;
     width: 100%;
@@ -610,16 +704,32 @@ button:hover{
     font-weight: 600;
 }
 
-/* Media query for screen width 768px and below */
+#f3 i{
+    color: #000;
+    margin-right: 5px;
+}
+
+
 @media (max-width: 768px) {
-    /* Adjust logo size */
-    #logo {
-        height: 150px;
-        width: 180px;
-        margin-top: 20px;
+    
+    body{
+        width: 70%;
+        height: 100vh;
     }
 
-    /* Navigation menu style */
+    #nav{
+        width: 100%;
+        height: 60px;
+        padding: 25px;
+        position: fixed;
+    }
+
+    #logo {
+        height: 80px;
+        width: 100px;
+    }
+
+   
     #nav ul {
         position: fixed;
         top: 0;
@@ -636,12 +746,11 @@ button:hover{
         overflow-x: hidden;
     }
 
-    /* Show menu when active */
     #nav ul.active {
         right: 0;
     }
 
-    /* Adjust menu items */
+  
     #nav ul li {
         display: block;
         font-size: 22px;
@@ -652,13 +761,27 @@ button:hover{
         color: #26e1e7;
     }
 
-    /* Hide the menu icon */
+   
     .menu-icon {
         display: flex;
         margin-left: 220px;
     }
 
-    /* Adjust card size */
+    #main{
+        width: 100%;
+        position: relative;
+    }
+
+    #page1{
+        width: 100%;
+        height: 100vh;
+    }
+
+    #page1 h1{
+        font-size: 40px;
+    }
+
+   
     .card {
         width: 80%;
         height: 60%;
@@ -669,25 +792,148 @@ button:hover{
     }
 }
 
-/* Media query for screen width 600px and below */
+
 @media (max-width: 600px) {
-    /* Reduce the logo size further */
+    
+
+    body{
+        width: 80%;
+        height: 100%;
+    }
+
+    #nav{
+        width: 100%;
+        height: 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .menu-icon{
+        margin-left: -6px;
+        margin-right: 0px;
+        width: 30px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    #nav ul {
+        position: fixed;
+        top: 10px;
+        right: -110%;
+        background-color: #000;
+        height: 50vh;
+        width: 74%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        transition: 0.5s;
+        overflow-x: hidden;
+    }
+
     #logo {
         height: 80px;
-        width: 130px;
+        width: 120px;
+        margin-left: -20px;
     }
 
-    /* Smaller font size for headers */
+    #main{
+        width: 125.5%;
+        margin-left: 0px;
+        overflow-x: hidden;
+    }
+
+    #page1{
+        height: 100vh;
+        width: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+   
     #page1 h1 {
-        font-size: 50px;
+        font-size: 45px;
+        font-weight: 800;
+        text-align: center;
     }
 
-    /* Navigation menu items size for small screens */
+    .sub{
+        font-size: 28px;
+        font-weight: 800;
+    }
+
+    .sub::before{
+        content: "(CODING CLUB)";
+        position: absolute;
+        color: black;
+        top: -3px;
+        left: -3px;
+        -webkit-text-stroke: 2px #95c11e;
+        z-index: -1;
+    }
+
+    #page1 h2{
+        font-size: 22px;
+        text-align: center;
+    }
+
+    #sub2{
+        font-size: 18px;
+        text-align: center;
+    }
+
+    #ssit{
+        width: 150px;
+        height: 150px;
+        margin-top: 120px;
+       
+    }
+
+    
     #nav ul li {
         font-size: 18px;
     }
 
-    /* Make form more compact */
+    #page2{
+        height: 200vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #scroller h4{
+        font-size: 40px;
+    }
+
+    #about-img{
+        height: 90px;
+        width: 90px;
+    }
+
+    #about-us{
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       flex-direction: column;
+       height: 60px;
+       
+    }
+
+    #about-us-in h3{
+        font-size: 25px;
+    }
+
+   #aboutp{
+    font-size: 18px;
+   }
+    
     #form {
         padding: 15px;
     }
@@ -700,13 +946,12 @@ button:hover{
         font-size: 0.9rem;
     }
 
-    /* Adjust the button size */
+   
     button {
         font-size: 14px;
         padding: 15px;
     }
 
-    /* Adjust card height in the cards section */
     .card {
         height: 50%;
     }
